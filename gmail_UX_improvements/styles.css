@@ -1,0 +1,66 @@
+/** CSS Rules to improve the Gmail user experience by offering customizable tools to improve one's ability to visually scan their inbox, organize priorities, and find what they're looking for. **/
+
+
+/** To fade out any email already replied to**/
+
+div table tbody tr:has(div.at[title="Replied"]) {
+    /*Fades out any email replied to already, if using a "Replied" label method.Requires a filter rule that applies user-created "Replied" label to emails, usually done by using the filter "From:me". Note that using this method with conversation view enabled will not clear the gray-ing out of a conversation after your reply is replied to, and it is recommended to disable conversation view and use the below method instead. */
+    filter: opacity(70%)
+}
+
+div table tbody tr:has(div.ay.aA) {
+    /*Fades out any email replied to already using the "arrow" symbol gmail natively adds when conversation view is disabled. Requires conversation view to be disabled.*/
+    filter: opacity(70%);
+}
+
+
+/** To replace visually overwhelming search result highlight feature with a more readable option **/
+
+.il {
+    /*Replaces annoying highlight with a thick underline. Can add option to change color, etc*/
+    background: none !important;
+    text-decoration-line: underline;
+    text-decoration-thickness: 3px;
+}
+
+/* @follow-up offer more options: underline colors, overline, highlight but more transparent/different color, etc */
+
+
+
+/** To highlight the full row of an email labelled with a user-created label according to a user-defined color scheme **/ 
+    /* @follow-up Test for night-mode extension compatibility, effect of flat 5px at different viewports, mobile, etc. In future, allow user-defined color schemes (background color + inverted color) and automatically detect contrast/visibility issues using some tool like https://webaim.org/resources/contrastchecker/ */
+
+    /**IMPORTANT: Replace "label" with whatever label you wish to color, and likewise with the background color. For now, to apply highlights for more than one label you will have to copy and paste the below rules and replacing the "label" with the other label.**/
+div table tbody tr:has(div.at[title="label"]) {
+    /* Turns entire row for the email matching the label to a different color, inverts text color */
+    background-color: #9E95DA;
+    border-style: solid;
+    border-radius: 5px;
+    color: white;
+
+}
+
+div table tbody tr:has(div.at[title="label"]) td div.brd div.brc {
+    /*To invert color of text of attachment titles as well */
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+div table tbody tr:has(div.at[title="label"]) td.yX.xY div.yW span.bx0 {
+    /*To invert color of text of conversation thread email count number. Only works if conversation view is enabled.*/
+    color: rgba(255, 255, 255, 0.5) !important;
+    /*@follow-up Add option in future to customize this feature to fit the view/accessibility desires of the user
+    Some possible options: */
+        /*color: white !important;*/
+    font-weight: bold !important; /* Optional */
+}
+
+div table tbody tr:has(div.at[title="label"]) td span.y2 {
+    /*To invert the color (and make grayed out) the short preview text that comes after an email's title*/
+    color: rgba(255, 255, 255, 0.8)
+}
+
+div table tbody tr:has(div.at[title="label"]) td.xY > span > span {
+    /*To invert the color of the time of arrival of emails that arrived today.
+    The other rules cover previous days, but not the current day.*/
+    color: white;
+}
