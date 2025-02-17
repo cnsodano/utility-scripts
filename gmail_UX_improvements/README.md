@@ -1,6 +1,9 @@
+![test](/gmail_UX_improvements/docs/Better_Gmail_demo.png)
+
+
 ## Gmail UX Improvements
 
-CSS Rules to improve the Gmail user experience by offering customizable tools to improve one's ability to visually scan their inbox, organize priorities, and find what they're looking for. This will be turned into a simple CSS-injector extension with customization options available through the extension UI. Posted here in the meantime, as it can be used by people comfortable with generic CSS injector extensions like [Stylus](https://github.com/openstyles/stylus?tab=readme-ov-file)
+CSS Rules to improve the Gmail user experience by offering customizable tools to improve one's ability to visually scan their inbox, organize priorities, and find what they're looking for. This will be turned into a simple CSS-injector extension with customization options available through the extension UI. Posted here in the meantime, as it can be used by people comfortable with generic CSS injector extensions like [Stylus](https://github.com/openstyles/stylus?tab=readme-ov-file). Copy contents of the styles.css to put into your CSS injector. The domain that this was tested on was the gmail inbox homepage (https://mail.google.com/mail/u/3/) on Firefox. 
 
 
 ## Highlighting Emails by Category
@@ -19,3 +22,8 @@ This tool also allows customization of the way search query matches are presente
 
 - Not yet implemented: 
     - UI for selecting preferred text decoration style and color/opacity/boldness/weight of the decoration
+
+
+## Future Directions
+- Publish an extension that injects the CSS snippets
+- Develop GUI components to offer easy customization 
