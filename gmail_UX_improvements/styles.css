@@ -130,7 +130,7 @@ div table tbody tr:has(div.at[title="Label1"]) {
 /**Label2**/
 div table tbody tr:has(div.at[title="Label2"]) {
     /* Turns entire row for the email matching the label to a different color, inverts text color */
-    background-color: rgba(505, 241, 118,0.2);
+    background-color: rgba(255, 241, 118,0.2);
     border-style: solid;
     border-color: white;
     border-radius: 8px;
@@ -161,7 +161,7 @@ tr:hover:has(div.at) div.at{
 
 [data-tooltip="Label2"] div.qj.aEe.qr{
     /*Turn the |> button next to the label title on the sidebar to the same color that the emails with that label are highlighted as*/
-    background-color: rgba(505, 241, 118,1);
+    background-color: rgba(255, 241, 118,1);
 }
 
 
